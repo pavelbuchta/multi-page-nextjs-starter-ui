@@ -15,6 +15,9 @@ const config: Config = {
       maxWidth: {
         content: "1300px",
       },
+      padding: {
+        mobile: "16px",
+      },
       colors: {
         foreground: {
           DEFAULT: "var(--foreground)",

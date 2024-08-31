@@ -5,17 +5,17 @@
 :root {
   color-scheme: dark; /* Creates a dark scrollbar */
 
-  --foreground: black;
-  --foreground-secondary: black;
-  --foreground-tertiary: black;
+  --foreground: white;
+  --foreground-secondary: white;
+  --foreground-tertiary: white;
 
   --background: black;
   --background-secondary: black;
   --background-secondary: black;
 
-  --border: black;
+  --border: grey;
 
-  --accend: black;
+  --accend: blue;
 }
 
 .theme-light {
@@ -23,13 +23,13 @@
   --foreground-secondary: black;
   --foreground-tertiary: black;
 
-  --background: black;
-  --background-secondary: black;
-  --background-secondary: black;
+  --background: white;
+  --background-secondary: white;
+  --background-secondary: white;
 
-  --border: black;
+  --border: grey;
 
-  --accend: black;
+  --accend: blue;
 }
 
 ::selection {
@@ -43,6 +43,18 @@
 @layer base {
   * {
     box-sizing: border-box;
+  }
+
+  h1 {
+    @apply text-[28px] font-bold leading-[120%] tracking-tighter md:text-[40px] md:leading-[110%];
+  }
+
+  h2 {
+    @apply text-[28px] font-bold leading-[130%] tracking-tighter md:text-[40px];
+  }
+
+  h3 {
+    @apply mb-1.5 text-[13px] font-medium uppercase;
   }
 }
 

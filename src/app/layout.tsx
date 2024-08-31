@@ -1,3 +1,7 @@
+import Footer from "@/components/shared/footer";
+import Navbar from "@/components/shared/navbar";
+import OnloadAnimation from "@/components/utils/onload-animation";
+import SmoothScroller from "@/components/utils/smooth-scroller";
 import {
   COMPANY_CATEGORY,
   COMPANY_NAME,
@@ -63,7 +67,15 @@ export default async function RootLayout({
           inter.variable
         )}
       >
-        {children}
+        <SmoothScroller>
+          <OnloadAnimation>
+            <Navbar />
+            <div className="flex w-full justify-center">
+              <main className="w-full max-w-content">{children}</main>
+            </div>
+            <Footer />
+          </OnloadAnimation>
+        </SmoothScroller>
       </body>
     </html>
   );
